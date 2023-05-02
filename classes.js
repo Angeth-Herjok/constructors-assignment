@@ -115,6 +115,7 @@ class Quiz{
     this.currentQuestionIndex
     }
     addQuestions(){
+        
 
     }
     nextQuestions(){
