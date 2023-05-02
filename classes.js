@@ -34,7 +34,7 @@ console.log(car);
 // calculateRentalDuration that returns the rental duration in days.
 class Car{
     constructor(renterName,rentalStartDate,rentalEndDate){
-        this.car=Car
+        this.car=car
         this.renterName=renterName
         this.rentalStartDate=rentalStartDate
         this.rentalEndDate=rentalEndDate
@@ -52,14 +52,23 @@ class Car{
 // a rental involving the car you created. Finally, calculate the rental duration using
 // the calculateRentalDuration method.
 class Car{
-
+    constructor(car,renterName,rentalStartDate,rentalEndDate){
+        this.car=car
+        this.renterName=renterName
+        this.rentalStartDate=rentalStartDate
+    }
+    calculateRentalDuration(){
+        const duration=Math.round(Math.abs(this.rentalEndDate-this.rentalStartDate))/
+        (600*20*20*12)
+        console.log(duration);
+        
+    }
 }
 
+let hiringCar=new Rental("nissan","BMW",new Date('9/8/2020'),new Date('2/12/2023'))
+console.log(hiringCar)
+hiringCar.rentalCarDuration()
 
-// let carhire=new Rental("subaru","loice mwau",new Date('11/12/2020'),new Date('1/4/2023'))
-// console.log(carhire)
-// carhire.rentalCarDuration()
-// Loice Mwau has paused their notifications
 
 
 // Question2
@@ -75,6 +84,16 @@ class Car{
 // The Question class should also have a method called checkAnswer that takes a
 // user's answer as a parameter and returns true if the answer is correct and false
 // otherwise.
+class Question{
+    constructor(text,options,correctAnswer,checkAnswer){
+        this.text=text
+        this.options=options
+        this.correctAnswer=correctAnswer
+    }
+    checkAnswer(users){
+
+    }
+}
 
 // 2. Create a Quiz class with the following properties:
 // ● questions(array):An array of Question objects.
@@ -89,6 +108,20 @@ class Car{
 // ● submitAnswer: Takes a user's answer as a parameter, checks if the answer is
 // correct using the checkAnswer method of the Question class, and updates the 
 // score if the answer is correct
+class Quiz{
+    constructor(Questions,currentQuestionIndex,score){
+    this.Questions=Questions
+    this.score=80
+    this.currentQuestionIndex
+    }
+    addQuestions(){
 
+    }
+    nextQuestions(){
 
+    }
+    submitAnswer(){
 
+    }
+
+}
