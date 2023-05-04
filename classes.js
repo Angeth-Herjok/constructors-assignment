@@ -45,7 +45,7 @@ class CarRental{
     
     }
 }
-let duration=new CarRental("NIssan","John","50days","30days")
+let duration=new CarRental("NIssan","John",new Date(`2022/03/23`),new Date(`2023/02/23`))
 console.log(duration);
 
 // 3) Create an instance of the Car class or function constructor for a car in the
@@ -88,11 +88,11 @@ class Question{
         this.correctAnswer=correctAnswer
     }
     checkAnswer(usersAnswer){
-
-
-
+        return usersAnswer==this.correctAnswer()
     }
 }
+let questionAnswer=new Question("This is a coding program",["1.Also builds professional skills 2.It teaches Research"],true)
+console.log(questionAnswer);
 
 // 2. Create a Quiz class with the following properties:
 // ● questions(array):An array of Question objects.
@@ -108,21 +108,21 @@ class Question{
 // correct using the checkAnswer method of the Question class, and updates the 
 // score if the answer is correct
 class Quiz{
-    constructor(Questions,currentQuestionIndex,score){
+    constructor(Questions,currentQuestionIndex,score,nextQuestions){
     this.Questions=Questions
-    this.score=80
+    this.score=score
     this.currentQuestionIndex
+    this.nextQuestions=nextQuestions
     }
-    addQuestions(){
-        
-        
-
+    addQuestions(question){
+        return question=this.Questions()
     }
-    nextQuestions(){
-
+    nextQuestions(questionNext){
+        return questionNext=this.nextQuestions()
     }
-    submitAnswer(){
-
+    submitAnswer(usersAnswers){
+        return usersAnswers=this.submitAnswer()
     }
-
 }
+let quizAnswers=new Quiz("How does the system","80","About school",1)
+console.log(quizAnswers);
