@@ -3,6 +3,7 @@
 // function constructor for representing cars in their inventory and another one for
 // representing rental information.
 // Requirements:
+
 // 1) Create a Car class or function constructor that has the following properties:
 // a. make (string): The make of the car, e.g., "Toyota".
 // b. model (string): The model of the car, e.g., "Camry".
@@ -32,43 +33,39 @@ console.log(car);
 // ● rentalEndDate (Date object): The end date of the rental period.
 // The Rental class or function constructor should also have a method called
 // calculateRentalDuration that returns the rental duration in days.
-class Car{
-    constructor(renterName,rentalStartDate,rentalEndDate){
+class CarRental{
+    constructor(car,renterName,rentalStartDate,rentalEndDate){
         this.car=car
         this.renterName=renterName
         this.rentalStartDate=rentalStartDate
         this.rentalEndDate=rentalEndDate
     }
     calculateRentalDuration(){
-        const duration=Math.round(Math.abs(this.rentalEndDate-this.rentalStartDate))/
-        (600*20*20*12)
-        console.log(duration);
-
+        this.renterName=this.renterName()
+    
     }
 }
+let duration=new CarRental("NIssan","John","50days","30days")
+console.log(duration);
 
 // 3) Create an instance of the Car class or function constructor for a car in the
 // inventory. Then, create an instance of the Rental class or function constructor for
 // a rental involving the car you created. Finally, calculate the rental duration using
 // the calculateRentalDuration method.
-class Car{
-    constructor(car,renterName,rentalStartDate,rentalEndDate){
-        this.car=car
-        this.renterName=renterName
+
+class CarRentalDuration{
+    constructor(rentalStartDate,rentalEndDate){
+
         this.rentalStartDate=rentalStartDate
+        this.rentalEndDate=rentalEndDate
     }
     calculateRentalDuration(){
-        const duration=Math.round(Math.abs(this.rentalEndDate-this.rentalStartDate))/
-        (600*20*20*12)
-        console.log(duration);
-        
+        this.renterName=this.renterName()
+    
     }
 }
-
-let hiringCar=new Rental("nissan","BMW",new Date('9/8/2020'),new Date('2/12/2023'))
-console.log(hiringCar)
-hiringCar.rentalCarDuration()
-
+let rentalDuration=new CarRentalDuration(2,31)
+console.log(rentalDuration);
 
 
 // Question2
@@ -90,7 +87,9 @@ class Question{
         this.options=options
         this.correctAnswer=correctAnswer
     }
-    checkAnswer(users){
+    checkAnswer(usersAnswer){
+
+
 
     }
 }
@@ -115,6 +114,7 @@ class Quiz{
     this.currentQuestionIndex
     }
     addQuestions(){
+        
         
 
     }
